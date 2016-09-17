@@ -1,0 +1,17 @@
+description            | number | ref Mouser
+------------------------------------------------------
+capacitor 0.033uF50V   | 4      | 581-06031A330FAT2A
+capacitor 0.68uF50V    | 2      | 80-C0603C681F5G
+coil 15uH/3.5A         | 2      | 994-MSS1260-153MLD
+capacitor 0.1uF/25V    | 2      | 80-C0603X104K5R
+capacitor 0.047uF/25V  | 2      | 810-C1608X7R1H473KAE
+capacitor 4700pF/50V   | 2      | 80-C0603X472F5J
+resistor 470ohm        | 2      | 755-ESR03EZPF4700
+resistor 10k           | 1      | 652-CRT0603BY1002EAS
+resistor 18.2k         | 1      | 71-CRCW0603-18.2K-E3
+barrel power plug      | 1      | 163-179PH-EX
+dc-dc converter        | 1      | 709-SMU02N-05
+power                  | 1      | 552-PSAC30U-240L6
+usb type a             | 1      | 710-61400416021
+connectivity (con6)    | 1      | 571-7-534206-0
+
