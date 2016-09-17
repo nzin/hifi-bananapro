@@ -7,7 +7,7 @@ capacitor 0.1uF/25V    | 2      | 80-C0603X104K5R
 capacitor 0.047uF/25V  | 2      | 810-C1608X7R1H473KAE
 capacitor 4700pF/50V   | 2      | 80-C0603X472F5J
 resistor 470ohm        | 2      | 755-ESR03EZPF4700
-resistor 10k           | 1      | 652-CRT0603BY1002EAS
+resistor 10k           | 3      | 652-CRT0603BY1002EAS
 resistor 18.2k         | 1      | 71-CRCW0603-18.2K-E3
 barrel power plug      | 1      | 163-179PH-EX
 dc-dc converter        | 1      | 709-SMU02N-05
