@@ -14,4 +14,4 @@ dc-dc converter        | 1      | 709-SMU02N-05
 power                  | 1      | 552-PSAC30U-240L6
 usb type a             | 1      | 710-61400416021
 connectivity (con6)    | 1      | 571-7-534206-0
-
+capacitor 330uF        | 1      | 667-ECA-1EM331
