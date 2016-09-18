@@ -2185,6 +2185,60 @@ In this library the device names are the same as the pin names of the symbols, t
 </deviceset>
 </devicesets>
 </library>
+<library name="skywriter">
+<packages>
+<package name="SKYWRITER_DIM">
+<pad name="GND" x="0" y="7.62" drill="1"/>
+<pad name="TRFR" x="0" y="5.08" drill="1"/>
+<pad name="RESET" x="0" y="2.54" drill="1"/>
+<pad name="SCL" x="0" y="0" drill="1"/>
+<pad name="SDA" x="0" y="-2.54" drill="1"/>
+<pad name="VCC" x="0" y="-5.08" drill="1"/>
+<wire x1="-2.54" y1="10.16" x2="-2.54" y2="-7.62" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="-7.62" x2="2.54" y2="-7.62" width="0.127" layer="21"/>
+<wire x1="2.54" y1="-7.62" x2="2.54" y2="10.16" width="0.127" layer="21"/>
+<wire x1="2.54" y1="10.16" x2="-2.54" y2="10.16" width="0.127" layer="21"/>
+<text x="2.54" y="-5.08" size="1.27" layer="21" rot="R90">&gt;Name</text>
+<text x="-2.54" y="-7.62" size="1.27" layer="21">VCC</text>
+</package>
+</packages>
+<symbols>
+<symbol name="SKYWRITER_SYM">
+<pin name="GND" x="-10.16" y="12.7" length="middle"/>
+<pin name="TRFR" x="-10.16" y="7.62" length="middle"/>
+<pin name="RESET" x="-10.16" y="2.54" length="middle"/>
+<pin name="SCL" x="-10.16" y="-2.54" length="middle"/>
+<pin name="SDA" x="-10.16" y="-7.62" length="middle"/>
+<pin name="VCC3.3" x="-10.16" y="-12.7" length="middle"/>
+<wire x1="-5.08" y1="15.24" x2="-5.08" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-15.24" x2="7.62" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-15.24" x2="7.62" y2="15.24" width="0.254" layer="94"/>
+<wire x1="7.62" y1="15.24" x2="-5.08" y2="15.24" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="SKYWRITER">
+<gates>
+<gate name="G$1" symbol="SKYWRITER_SYM" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SKYWRITER_DIM">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="RESET" pad="RESET"/>
+<connect gate="G$1" pin="SCL" pad="SCL"/>
+<connect gate="G$1" pin="SDA" pad="SDA"/>
+<connect gate="G$1" pin="TRFR" pad="TRFR"/>
+<connect gate="G$1" pin="VCC3.3" pad="VCC"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2269,6 +2323,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="R6" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10k"/>
 <part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
+<part name="U$10" library="skywriter" deviceset="SKYWRITER" device=""/>
+<part name="+3V7" library="supply1" deviceset="+3V3" device=""/>
+<part name="SUPPLY29" library="supply2" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2352,6 +2409,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="R6" gate="G$1" x="-63.5" y="-38.1" rot="R90"/>
 <instance part="+3V5" gate="G$1" x="-63.5" y="5.08"/>
 <instance part="+3V6" gate="G$1" x="-63.5" y="-30.48"/>
+<instance part="U$10" gate="G$1" x="-71.12" y="38.1" rot="R180"/>
+<instance part="+3V7" gate="G$1" x="-60.96" y="53.34"/>
+<instance part="SUPPLY29" gate="GND" x="-60.96" y="22.86"/>
 </instances>
 <busses>
 </busses>
@@ -2540,6 +2600,10 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="X4" gate="-2" pin="KL"/>
 <pinref part="SUPPLY28" gate="GND" pin="GND"/>
 <wire x1="-71.12" y1="-48.26" x2="-63.5" y2="-48.26" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$10" gate="G$1" pin="GND"/>
+<pinref part="SUPPLY29" gate="GND" pin="GND"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -2820,6 +2884,10 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="R4" gate="G$1" pin="2"/>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
 </segment>
+<segment>
+<pinref part="U$10" gate="G$1" pin="VCC3.3"/>
+<pinref part="+3V7" gate="G$1" pin="+3V3"/>
+</segment>
 </net>
 <net name="N$6" class="0">
 <segment>
@@ -2841,6 +2909,42 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-20.32" y1="-12.7" x2="-53.34" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="-12.7" x2="-53.34" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="-7.62" x2="-63.5" y2="-7.62" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$30" class="0">
+<segment>
+<pinref part="U$5" gate="G$1" pin="TWI2-SDA"/>
+<wire x1="-20.32" y1="12.7" x2="-40.64" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="12.7" x2="-40.64" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="U$10" gate="G$1" pin="SDA"/>
+<wire x1="-40.64" y1="45.72" x2="-60.96" y2="45.72" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$31" class="0">
+<segment>
+<pinref part="U$5" gate="G$1" pin="TWI2-CLK"/>
+<wire x1="-20.32" y1="7.62" x2="-43.18" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="7.62" x2="-43.18" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="U$10" gate="G$1" pin="SCL"/>
+<wire x1="-43.18" y1="40.64" x2="-60.96" y2="40.64" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$32" class="0">
+<segment>
+<pinref part="U$5" gate="G$1" pin="IO1"/>
+<wire x1="-20.32" y1="2.54" x2="-45.72" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="-45.72" y1="2.54" x2="-45.72" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="U$10" gate="G$1" pin="RESET"/>
+<wire x1="-45.72" y1="35.56" x2="-60.96" y2="35.56" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$33" class="0">
+<segment>
+<pinref part="U$5" gate="G$1" pin="IO0"/>
+<wire x1="-20.32" y1="-7.62" x2="-48.26" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="-7.62" x2="-48.26" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="U$10" gate="G$1" pin="TRFR"/>
+<wire x1="-48.26" y1="30.48" x2="-60.96" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

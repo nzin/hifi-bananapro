@@ -15,4 +15,9 @@ power                  | 1      | 552-PSAC30U-240L6
 usb type a             | 1      | 710-61400416021
 connectivity (con6)    | 1      | 571-7-534206-0
 capacitor 330uF        | 1      | 667-ECA-1EM331
-terminal block 2pos    | 4      | 651-1729128
+terminal block 2pos    | 2      | 651-1729128
+
+optional
+terminal block 2pos    | 2      | 651-1729128
+header 6 pos           | 1      | 517-9611066404AR
+
