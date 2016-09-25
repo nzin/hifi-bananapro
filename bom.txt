@@ -12,10 +12,11 @@ resistor 18.2k         | 1      | 71-CRCW0603-18.2K-E3
 barrel power plug      | 1      | 163-179PH-EX
 dc-dc converter        | 1      | 709-SMU02N-05
 power                  | 1      | 552-PSAC30U-240L6
-usb type a             | 1      | 710-61400416021
+usb type a             | 1      | 710-614004160211 (and not 710-61400416021)
 connectivity (con6)    | 1      | 571-7-534206-0
 capacitor 330uF        | 1      | 667-ECA-1EM331
 terminal block 2pos    | 2      | 651-1729128
+amplifier TI           | 1      | 595-TAS5713PHPR
 
 optional
 terminal block 2pos    | 2      | 651-1729128
