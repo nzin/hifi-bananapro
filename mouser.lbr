@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.6.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -65,6 +65,7 @@
 <wire x1="9" y1="5" x2="-7" y2="5" width="0.127" layer="21"/>
 <text x="-6.35" y="-3.81" size="1.27" layer="21">&gt;Name</text>
 <text x="-6.35" y="-5.08" size="1.27" layer="21">&gt;Value</text>
+<pad name="GND1" x="3" y="-5" drill="3.2"/>
 </package>
 <package name="709-SMU02N-05_DIM">
 <pad name="VIN-" x="-5.08" y="0" drill="1.4" shape="square"/>
@@ -243,12 +244,12 @@
 <wire x1="-2.54" y1="-39.37" x2="-2.54" y2="11.43" width="0.127" layer="21"/>
 </package>
 <package name="MSS1260_DIM">
-<wire x1="-6" y1="6" x2="6" y2="6" width="0.127" layer="21"/>
-<wire x1="6" y1="6" x2="6" y2="-6" width="0.127" layer="21"/>
-<wire x1="6" y1="-6" x2="-6" y2="-6" width="0.127" layer="21"/>
-<wire x1="-6" y1="-6" x2="-6" y2="6" width="0.127" layer="21"/>
-<smd name="P$1" x="0" y="6" dx="5" dy="7" layer="1"/>
-<smd name="P$2" x="0" y="-6" dx="5" dy="7" layer="1"/>
+<wire x1="-5" y1="5" x2="5" y2="5" width="0.127" layer="21"/>
+<wire x1="5" y1="5" x2="5" y2="-5" width="0.127" layer="21"/>
+<wire x1="5" y1="-5" x2="-5" y2="-5" width="0.127" layer="21"/>
+<wire x1="-5" y1="-5" x2="-5" y2="5" width="0.127" layer="21"/>
+<smd name="P$1" x="0" y="4" dx="5" dy="4" layer="1"/>
+<smd name="P$2" x="0" y="-4" dx="5" dy="4" layer="1"/>
 </package>
 </packages>
 <symbols>
@@ -261,6 +262,7 @@
 <wire x1="0" y1="-5.08" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="10.16" y1="-5.08" x2="10.16" y2="5.08" width="0.254" layer="94"/>
 <wire x1="10.16" y1="5.08" x2="0" y2="5.08" width="0.254" layer="94"/>
+<pin name="GND1" x="15.24" y="0" length="middle" rot="R180"/>
 </symbol>
 <symbol name="709-SMU02N-05_SYM">
 <pin name="VIN-" x="15.24" y="0" length="middle" rot="R180"/>
@@ -449,6 +451,7 @@
 <device name="" package="163-179PH-EX_DIM">
 <connects>
 <connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="GND1" pad="GND1"/>
 <connect gate="G$1" pin="VCC" pad="VCC"/>
 </connects>
 <technologies>

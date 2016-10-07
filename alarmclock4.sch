@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.6.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -9,6 +9,10 @@
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
@@ -151,6 +155,7 @@
 <wire x1="9" y1="5" x2="-7" y2="5" width="0.127" layer="21"/>
 <text x="-6.35" y="-3.81" size="1.27" layer="21">&gt;Name</text>
 <text x="-6.35" y="-5.08" size="1.27" layer="21">&gt;Value</text>
+<pad name="GND1" x="3" y="-5" drill="3.2"/>
 </package>
 <package name="709-SMU02N-05_DIM">
 <pad name="VIN-" x="-5.08" y="0" drill="1.4" shape="square"/>
@@ -285,12 +290,12 @@
 <wire x1="-2.54" y1="-39.37" x2="-2.54" y2="11.43" width="0.127" layer="21"/>
 </package>
 <package name="MSS1260_DIM">
-<wire x1="-6" y1="6" x2="6" y2="6" width="0.127" layer="21"/>
-<wire x1="6" y1="6" x2="6" y2="-6" width="0.127" layer="21"/>
-<wire x1="6" y1="-6" x2="-6" y2="-6" width="0.127" layer="21"/>
-<wire x1="-6" y1="-6" x2="-6" y2="6" width="0.127" layer="21"/>
-<smd name="P$1" x="0" y="6" dx="5" dy="7" layer="1"/>
-<smd name="P$2" x="0" y="-6" dx="5" dy="7" layer="1"/>
+<wire x1="-5" y1="5" x2="5" y2="5" width="0.127" layer="21"/>
+<wire x1="5" y1="5" x2="5" y2="-5" width="0.127" layer="21"/>
+<wire x1="5" y1="-5" x2="-5" y2="-5" width="0.127" layer="21"/>
+<wire x1="-5" y1="-5" x2="-5" y2="5" width="0.127" layer="21"/>
+<smd name="P$1" x="0" y="4" dx="5" dy="4" layer="1"/>
+<smd name="P$2" x="0" y="-4" dx="5" dy="4" layer="1"/>
 </package>
 </packages>
 <symbols>
@@ -303,6 +308,7 @@
 <wire x1="0" y1="-5.08" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="10.16" y1="-5.08" x2="10.16" y2="5.08" width="0.254" layer="94"/>
 <wire x1="10.16" y1="5.08" x2="0" y2="5.08" width="0.254" layer="94"/>
+<pin name="GND1" x="15.24" y="0" length="middle" rot="R180"/>
 </symbol>
 <symbol name="709-SMU02N-05_SYM">
 <pin name="VIN-" x="15.24" y="0" length="middle" rot="R180"/>
@@ -449,6 +455,7 @@
 <device name="" package="163-179PH-EX_DIM">
 <connects>
 <connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="GND1" pad="GND1"/>
 <connect gate="G$1" pin="VCC" pad="VCC"/>
 </connects>
 <technologies>
@@ -2444,6 +2451,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="160.02" y1="17.78" x2="157.48" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="U$3" gate="G$1" pin="PVDD_D2"/>
 <wire x1="157.48" y1="17.78" x2="157.48" y2="15.24" width="0.1524" layer="91"/>
+<junction x="157.48" y="17.78"/>
 </segment>
 <segment>
 <pinref part="SUPPLY4" gate="G$1" pin="VCC"/>
@@ -2451,6 +2459,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="160.02" y1="-5.08" x2="157.48" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="U$3" gate="G$1" pin="PVDD_C2"/>
 <wire x1="157.48" y1="-5.08" x2="157.48" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="157.48" y="-5.08"/>
 </segment>
 <segment>
 <pinref part="SUPPLY3" gate="G$1" pin="VCC"/>
@@ -2458,6 +2467,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="160.02" y1="-27.94" x2="157.48" y2="-27.94" width="0.1524" layer="91"/>
 <pinref part="U$3" gate="G$1" pin="PVDD_B2"/>
 <wire x1="157.48" y1="-27.94" x2="157.48" y2="-30.48" width="0.1524" layer="91"/>
+<junction x="157.48" y="-27.94"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="PVDD_A2"/>
@@ -2465,6 +2475,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="157.48" y1="-53.34" x2="157.48" y2="-50.8" width="0.1524" layer="91"/>
 <pinref part="SUPPLY2" gate="G$1" pin="VCC"/>
 <wire x1="157.48" y1="-50.8" x2="160.02" y2="-50.8" width="0.1524" layer="91"/>
+<junction x="157.48" y="-50.8"/>
 </segment>
 </net>
 <net name="GND" class="1">
@@ -2475,6 +2486,11 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="127" y1="73.66" x2="111.76" y2="73.66" width="0.1524" layer="91"/>
 <junction x="127" y="73.66"/>
+<wire x1="134.62" y1="73.66" x2="134.62" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="68.58" x2="154.94" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="GND1"/>
+<wire x1="154.94" y1="68.58" x2="154.94" y2="76.2" width="0.1524" layer="91"/>
+<junction x="134.62" y="73.66"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="PGND_AB2"/>
@@ -2582,6 +2598,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="129.54" y1="-83.82" x2="134.62" y2="-83.82" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <pinref part="SUPPLY26" gate="GND" pin="GND"/>
+<junction x="134.62" y="-83.82"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="PBTL"/>
@@ -2654,6 +2671,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="172.72" y1="12.7" x2="187.96" y2="12.7" width="0.1524" layer="91"/>
 <pinref part="C14" gate="G$1" pin="2"/>
 <pinref part="U$6" gate="G$1" pin="P$1"/>
+<junction x="172.72" y="12.7"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -2678,6 +2696,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="172.72" y1="-55.88" x2="185.42" y2="-55.88" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="2"/>
 <pinref part="U$9" gate="G$1" pin="P$1"/>
+<junction x="172.72" y="-55.88"/>
 </segment>
 </net>
 <net name="N$14" class="1">
@@ -2688,6 +2707,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="172.72" y1="-33.02" x2="185.42" y2="-33.02" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="2"/>
 <pinref part="U$8" gate="G$1" pin="P$1"/>
+<junction x="172.72" y="-33.02"/>
 </segment>
 </net>
 <net name="N$15" class="0">
@@ -2705,6 +2725,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="172.72" y1="-10.16" x2="187.96" y2="-10.16" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="2"/>
 <pinref part="U$7" gate="G$1" pin="P$1"/>
+<junction x="172.72" y="-10.16"/>
 </segment>
 </net>
 <net name="N$17" class="0">
@@ -2722,6 +2743,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="X2" gate="-1" pin="KL"/>
 <pinref part="C6" gate="G$1" pin="1"/>
 <pinref part="U$8" gate="G$1" pin="P$2"/>
+<junction x="210.82" y="-33.02"/>
 </segment>
 </net>
 <net name="N$18" class="1">
@@ -2732,6 +2754,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="X2" gate="-2" pin="KL"/>
 <pinref part="C6" gate="G$1" pin="2"/>
 <pinref part="U$9" gate="G$1" pin="P$2"/>
+<junction x="210.82" y="-55.88"/>
 </segment>
 </net>
 <net name="N$19" class="1">
@@ -2742,6 +2765,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="X1" gate="-2" pin="KL"/>
 <pinref part="C5" gate="G$1" pin="2"/>
 <pinref part="U$7" gate="G$1" pin="P$2"/>
+<junction x="210.82" y="-10.16"/>
 </segment>
 </net>
 <net name="N$20" class="1">
@@ -2752,6 +2776,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="X1" gate="-1" pin="KL"/>
 <pinref part="C5" gate="G$1" pin="1"/>
 <pinref part="U$6" gate="G$1" pin="P$2"/>
+<junction x="210.82" y="12.7"/>
 </segment>
 </net>
 <net name="N$21" class="0">
@@ -2763,6 +2788,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="60.96" y1="-38.1" x2="55.88" y2="-38.1" width="0.1524" layer="91"/>
 <pinref part="C7" gate="G$1" pin="1"/>
 <pinref part="R5" gate="G$1" pin="2"/>
+<junction x="55.88" y="-38.1"/>
 </segment>
 </net>
 <net name="N$22" class="0">
@@ -2848,7 +2874,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="P+1" gate="1" pin="+5V"/>
 <junction x="20.32" y="22.86"/>
 <wire x1="20.32" y1="22.86" x2="20.32" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="22.86" x2="20.32" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="22.86" x2="20.32" y2="17.78" width="0.1524" layer="91"/>
+<junction x="20.32" y="17.78"/>
+<wire x1="20.32" y1="17.78" x2="20.32" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -2898,6 +2926,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-20.32" y1="-17.78" x2="-53.34" y2="-17.78" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="-17.78" x2="-53.34" y2="-43.18" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="-43.18" x2="-63.5" y2="-43.18" width="0.1524" layer="91"/>
+<junction x="-63.5" y="-43.18"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -2909,6 +2938,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-20.32" y1="-12.7" x2="-53.34" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="-12.7" x2="-53.34" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="-7.62" x2="-63.5" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="-63.5" y="-7.62"/>
 </segment>
 </net>
 <net name="N$30" class="0">
@@ -2950,6 +2980,9 @@ In this library the device names are the same as the pin names of the symbols, t
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="111,1,60.96,-27.94,N$21,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
