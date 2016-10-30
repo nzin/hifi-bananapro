@@ -158,16 +158,16 @@
 <pad name="GND1" x="3" y="-5" drill="3.2"/>
 </package>
 <package name="709-SMU02N-05_DIM">
-<pad name="VIN-" x="-5.08" y="0" drill="1.4" shape="square"/>
-<pad name="VIN+" x="-2.54" y="0" drill="1.4" shape="square"/>
-<pad name="VO-" x="0" y="0" drill="1.4" shape="square"/>
-<pad name="VO+" x="2.54" y="0" drill="1.4" shape="square"/>
+<pad name="VIN-" x="-5.08" y="-2.54" drill="1.4" shape="square"/>
+<pad name="VIN+" x="-2.54" y="-2.54" drill="1.4" shape="square"/>
+<pad name="VO-" x="0" y="-2.54" drill="1.4" shape="square"/>
+<pad name="VO+" x="2.54" y="-2.54" drill="1.4" shape="square"/>
 <wire x1="-7.62" y1="2.54" x2="-7.62" y2="-5.08" width="0.127" layer="21"/>
 <wire x1="-7.62" y1="-5.08" x2="5.08" y2="-5.08" width="0.127" layer="21"/>
 <wire x1="5.08" y1="-5.08" x2="5.08" y2="2.54" width="0.127" layer="21"/>
 <wire x1="5.08" y1="2.54" x2="-7.62" y2="2.54" width="0.127" layer="21"/>
-<text x="-7.62" y="-3.81" size="1.27" layer="21">&gt;Name</text>
-<text x="-7.62" y="-5.08" size="1.27" layer="21">&gt;Value</text>
+<text x="-7.62" y="1.27" size="1.27" layer="21">&gt;Name</text>
+<text x="-7.62" y="0" size="1.27" layer="21">&gt;Value</text>
 </package>
 <package name="USB_DIM">
 <pad name="P$1" x="-3" y="0" drill="1"/>
@@ -242,6 +242,7 @@
 <smd name="P$48" x="-4.25" y="-2.75" dx="1.05" dy="0.27" layer="1"/>
 <text x="-3.81" y="0" size="1.27" layer="21">TAS5713</text>
 <text x="-3.81" y="-1.27" size="1.27" layer="21">&gt;Name</text>
+<rectangle x1="-3.81" y1="-3.81" x2="3.81" y2="3.81" layer="43"/>
 </package>
 <package name="BANANAPRO-CON6_DIM">
 <pad name="P$1" x="-1.27" y="10.16" drill="1"/>
@@ -2333,6 +2334,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="U$10" library="skywriter" deviceset="SKYWRITER" device=""/>
 <part name="+3V7" library="supply1" deviceset="+3V3" device=""/>
 <part name="SUPPLY29" library="supply2" deviceset="GND" device=""/>
+<part name="R7" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="15k"/>
 </parts>
 <sheets>
 <sheet>
@@ -2397,7 +2399,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="SUPPLY16" gate="GND" x="20.32" y="-15.24"/>
 <instance part="SUPPLY17" gate="GND" x="20.32" y="5.08"/>
 <instance part="SUPPLY18" gate="GND" x="76.2" y="-5.08"/>
-<instance part="SUPPLY19" gate="GND" x="76.2" y="-12.7"/>
+<instance part="SUPPLY19" gate="GND" x="71.12" y="5.08" rot="R180"/>
 <instance part="SUPPLY20" gate="GND" x="76.2" y="-43.18"/>
 <instance part="SUPPLY21" gate="GND" x="76.2" y="-55.88"/>
 <instance part="SUPPLY22" gate="GND" x="76.2" y="-73.66"/>
@@ -2419,6 +2421,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="U$10" gate="G$1" x="-71.12" y="38.1" rot="R180"/>
 <instance part="+3V7" gate="G$1" x="-60.96" y="53.34"/>
 <instance part="SUPPLY29" gate="GND" x="-60.96" y="22.86"/>
+<instance part="R7" gate="G$1" x="71.12" y="-2.54" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -2565,10 +2568,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <junction x="53.34" y="-10.16"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="A_SEL(!FAULT!)"/>
-<pinref part="SUPPLY19" gate="GND" pin="GND"/>
-</segment>
-<segment>
 <pinref part="U$3" gate="G$1" pin="SCL"/>
 <pinref part="U$3" gate="G$1" pin="SDA"/>
 <wire x1="76.2" y1="-2.54" x2="76.2" y2="2.54" width="0.1524" layer="91"/>
@@ -2621,6 +2620,10 @@ In this library the device names are the same as the pin names of the symbols, t
 <segment>
 <pinref part="U$10" gate="G$1" pin="GND"/>
 <pinref part="SUPPLY29" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="R7" gate="G$1" pin="2"/>
+<pinref part="SUPPLY19" gate="GND" pin="GND"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -2975,6 +2978,14 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-48.26" y1="-7.62" x2="-48.26" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="U$10" gate="G$1" pin="TRFR"/>
 <wire x1="-48.26" y1="30.48" x2="-60.96" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$34" class="0">
+<segment>
+<pinref part="R7" gate="G$1" pin="1"/>
+<wire x1="71.12" y1="-7.62" x2="71.12" y2="-10.16" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="G$1" pin="A_SEL(!FAULT!)"/>
+<wire x1="71.12" y1="-10.16" x2="76.2" y2="-10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
