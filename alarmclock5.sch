@@ -2499,6 +2499,7 @@ Source: http://www.fairchildsemi.com/ds/FD/FDN360P.pdf</description>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY31" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="C16" library="SparkFun-Passives" deviceset="CAP_POL" device="PTH2" value="330uF/25V"/>
+<part name="R12" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -2596,9 +2597,10 @@ Source: http://www.fairchildsemi.com/ds/FD/FDN360P.pdf</description>
 <instance part="GND2" gate="1" x="-53.34" y="-106.68" rot="MR0"/>
 <instance part="R11" gate="G$1" x="-53.34" y="-81.28" rot="MR90"/>
 <instance part="Q1" gate="G$1" x="-66.04" y="-93.98" rot="MR0"/>
-<instance part="GND3" gate="1" x="-78.74" y="-109.22" rot="MR0"/>
+<instance part="GND3" gate="1" x="-78.74" y="-111.76" rot="MR0"/>
 <instance part="SUPPLY31" gate="G$1" x="-78.74" y="-99.06" rot="MR0"/>
 <instance part="C16" gate="G$1" x="-78.74" y="-101.6" rot="MR0"/>
+<instance part="R12" gate="G$1" x="-86.36" y="-104.14" rot="MR90"/>
 </instances>
 <busses>
 </busses>
@@ -2654,6 +2656,9 @@ Source: http://www.fairchildsemi.com/ds/FD/FDN360P.pdf</description>
 <pinref part="C16" gate="G$1" pin="+"/>
 <pinref part="Q1" gate="G$1" pin="D"/>
 <wire x1="-68.58" y1="-99.06" x2="-78.74" y2="-99.06" width="0.1524" layer="91"/>
+<pinref part="R12" gate="G$1" pin="2"/>
+<wire x1="-78.74" y1="-99.06" x2="-86.36" y2="-99.06" width="0.1524" layer="91"/>
+<junction x="-78.74" y="-99.06"/>
 </segment>
 </net>
 <net name="GND" class="1">
@@ -2810,6 +2815,10 @@ Source: http://www.fairchildsemi.com/ds/FD/FDN360P.pdf</description>
 <segment>
 <pinref part="C16" gate="G$1" pin="-"/>
 <pinref part="GND3" gate="1" pin="GND"/>
+<wire x1="-78.74" y1="-109.22" x2="-78.74" y2="-106.68" width="0.1524" layer="91"/>
+<pinref part="R12" gate="G$1" pin="1"/>
+<wire x1="-78.74" y1="-109.22" x2="-86.36" y2="-109.22" width="0.1524" layer="91"/>
+<junction x="-78.74" y="-109.22"/>
 </segment>
 </net>
 <net name="N$1" class="0">
