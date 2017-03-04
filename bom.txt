@@ -8,7 +8,7 @@ capacitor 0.047uF/25V  | 2      | 810-C1608X7R1H473KAE
 capacitor 4700pF/50V   | 2      | 80-C0603X472F5J
 capacitor 2200pF/50V   | 1      | 81-GRM1885C1H222JA01
 resistor 470ohm        | 2      | 755-ESR03EZPF4700
-resistor 10k           | 6      | 652-CRT0603BY1002EAS
+resistor 10k           | 7      | 652-CRT0603BY1002EAS
 resistor 15k           | 1      | 71-TNPW060315K0BEEA
 resistor 18.2k         | 1      | 71-CRCW0603-18.2K-E3
 barrel power plug      | 1      | 163-179PH-EX
@@ -16,9 +16,11 @@ dc-dc converter        | 1      | 709-SMU02N-05
 power                  | 1      | 552-PSAC30U-240L6
 usb type a             | 1      | 710-614004160211
 connectivity (con6)    | 1      | 571-7-534206-0
-capacitor 330uF        | 1      | 667-ECA-1EM331
+capacitor 330uF        | 2      | 667-ECA-1EM331
 terminal block 2pos    | 2      | 651-1729128
 amplifier TI           | 1      | 595-TAS5713PHPR
+2n2222                 | 1      | 610-2N2222
+mosfet P-channel       | 1      | 757-SSM3J353FLF
 
 optional
 terminal block 2pos    | 2      | 651-1729128
