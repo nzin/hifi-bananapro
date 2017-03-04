@@ -16,13 +16,14 @@ dc-dc converter        | 1      | 709-SMU02N-05
 power                  | 1      | 552-PSAC30U-240L6
 usb type a             | 1      | 710-614004160211
 connectivity (con6)    | 1      | 571-7-534206-0
-capacitor 330uF        | 2      | 667-ECA-1EM331
+capacitor 330uF        | 1      | 667-ECA-1EM331
 terminal block 2pos    | 2      | 651-1729128
 amplifier TI           | 1      | 595-TAS5713PHPR
 2n2222                 | 1      | 610-2N2222
 mosfet P-channel       | 1      | 757-SSM3J353FLF
+capactor 470uF         | 1      | 667-EEU-FR1E471L (ou bien 667-EEU-FR1E681L)
 
 optional
 terminal block 2pos    | 2      | 651-1729128
-header 6 pos           | 1      | 517-9611066404AR
+header 6 pos           | 1      | 517-9611066404AR (ou 538-22-03-2061)
 
