@@ -2498,7 +2498,7 @@ Source: http://www.fairchildsemi.com/ds/FD/FDN360P.pdf</description>
 <part name="Q1" library="transistor-power" deviceset="FDN360P" device=""/>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY31" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
-<part name="C16" library="SparkFun-Passives" deviceset="CAP_POL" device="PTH2" value="330uF/25V"/>
+<part name="C16" library="SparkFun-Passives" deviceset="CAP_POL" device="PTH2" value="680uF/25V"/>
 <part name="R12" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10k"/>
 </parts>
 <sheets>
