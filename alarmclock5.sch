@@ -2488,7 +2488,7 @@ Source: http://www.fairchildsemi.com/ds/FD/FDN360P.pdf</description>
 <part name="R9" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10k"/>
 <part name="+3V8" library="supply1" deviceset="+3V3" device=""/>
 <part name="R10" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10k"/>
-<part name="C1" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="0.1uF25V"/>
+<part name="C1" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="1uF25V"/>
 <part name="SUPPLY18" library="supply2" deviceset="GND" device=""/>
 <part name="C15" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="2200pF50V"/>
 <part name="SUPPLY30" library="supply2" deviceset="GND" device=""/>
@@ -2500,6 +2500,12 @@ Source: http://www.fairchildsemi.com/ds/FD/FDN360P.pdf</description>
 <part name="SUPPLY31" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="C16" library="SparkFun-Passives" deviceset="CAP_POL" device="PTH2" value="680uF/25V"/>
 <part name="R12" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10k"/>
+<part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
+<part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="C17" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="10uF25V"/>
+<part name="SUPPLY32" library="supply2" deviceset="GND" device=""/>
+<part name="C18" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="0.1uF25V"/>
+<part name="C19" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="10uF25V"/>
 </parts>
 <sheets>
 <sheet>
@@ -2601,6 +2607,12 @@ Source: http://www.fairchildsemi.com/ds/FD/FDN360P.pdf</description>
 <instance part="SUPPLY31" gate="G$1" x="-78.74" y="-99.06" rot="MR0"/>
 <instance part="C16" gate="G$1" x="-78.74" y="-101.6" rot="MR0"/>
 <instance part="R12" gate="G$1" x="-86.36" y="-104.14" rot="MR90"/>
+<instance part="SUPPLY1" gate="GND" x="-22.86" y="-106.68"/>
+<instance part="GND6" gate="1" x="-12.7" y="-106.68" rot="MR0"/>
+<instance part="C17" gate="G$1" x="109.22" y="48.26"/>
+<instance part="SUPPLY32" gate="GND" x="109.22" y="55.88" rot="R180"/>
+<instance part="C18" gate="G$1" x="114.3" y="48.26"/>
+<instance part="C19" gate="G$1" x="119.38" y="48.26"/>
 </instances>
 <busses>
 </busses>
@@ -2819,6 +2831,20 @@ Source: http://www.fairchildsemi.com/ds/FD/FDN360P.pdf</description>
 <pinref part="R12" gate="G$1" pin="1"/>
 <wire x1="-78.74" y1="-109.22" x2="-86.36" y2="-109.22" width="0.1524" layer="91"/>
 <junction x="-78.74" y="-109.22"/>
+</segment>
+<segment>
+<pinref part="SUPPLY1" gate="GND" pin="GND"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="-22.86" y1="-104.14" x2="-12.7" y2="-104.14" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C17" gate="G$1" pin="1"/>
+<pinref part="SUPPLY32" gate="GND" pin="GND"/>
+<pinref part="C18" gate="G$1" pin="1"/>
+<wire x1="114.3" y1="53.34" x2="109.22" y2="53.34" width="0.1524" layer="91"/>
+<junction x="109.22" y="53.34"/>
+<pinref part="C19" gate="G$1" pin="1"/>
+<wire x1="114.3" y1="53.34" x2="119.38" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -3091,11 +3117,19 @@ Source: http://www.fairchildsemi.com/ds/FD/FDN360P.pdf</description>
 <segment>
 <pinref part="U$3" gate="G$1" pin="AVDD"/>
 <wire x1="121.92" y1="38.1" x2="121.92" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="45.72" x2="109.22" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="45.72" x2="119.38" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="U$3" gate="G$1" pin="DVDD"/>
+<wire x1="119.38" y1="45.72" x2="114.3" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="45.72" x2="109.22" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="38.1" x2="109.22" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
 <junction x="121.92" y="45.72"/>
+<pinref part="C17" gate="G$1" pin="2"/>
+<junction x="109.22" y="45.72"/>
+<pinref part="C18" gate="G$1" pin="2"/>
+<junction x="114.3" y="45.72"/>
+<pinref part="C19" gate="G$1" pin="2"/>
+<junction x="119.38" y="45.72"/>
 </segment>
 <segment>
 <pinref part="R6" gate="G$1" pin="2"/>

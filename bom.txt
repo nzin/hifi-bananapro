@@ -4,6 +4,8 @@ capacitor 0.033uF50V   | 4      | 81-GRM188R71H333KA61
 capacitor 0.68uF50V    | 2      | 810-C2012X7R1H684K
 coil 15uH/3.5A         | 4      | 994-MSS1260-153MLD (or 81-DD1217AS-H-150MP3)
 capacitor 0.1uF/25V    | 3      | 80-C0603X104K5R
+capacitor 1uF/25V      | 1      | 810-CGA3E1X7R1E105K
+capacitor 10uF/25V     | 2      | 963-TMK107BBJ106MA-T
 capacitor 0.047uF/25V  | 2      | 810-C1608X7R1H473KAE
 capacitor 4700pF/50V   | 2      | 80-C0603X472F5J
 capacitor 2200pF/50V   | 1      | 81-GRM1885C1H222JA01
