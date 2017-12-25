@@ -2608,7 +2608,7 @@ Source: http://www.fairchildsemi.com/ds/FD/FDN360P.pdf</description>
 <instance part="SUPPLY32" gate="GND" x="109.22" y="55.88" rot="R180"/>
 <instance part="C18" gate="G$1" x="114.3" y="48.26"/>
 <instance part="C19" gate="G$1" x="119.38" y="48.26"/>
-<instance part="U$14" gate="G$1" x="-137.16" y="-129.54"/>
+<instance part="U$14" gate="G$1" x="-137.16" y="-129.54" rot="MR0"/>
 </instances>
 <busses>
 </busses>
@@ -2617,14 +2617,13 @@ Source: http://www.fairchildsemi.com/ds/FD/FDN360P.pdf</description>
 <segment>
 <wire x1="-172.72" y1="-129.54" x2="-162.56" y2="-129.54" width="0.1524" layer="91"/>
 <pinref part="U$4" gate="G$1" pin="VCC"/>
-<wire x1="-162.56" y1="-129.54" x2="-149.86" y2="-129.54" width="0.1524" layer="91"/>
 <wire x1="-200.66" y1="-124.46" x2="-200.66" y2="-116.84" width="0.1524" layer="91"/>
 <wire x1="-200.66" y1="-116.84" x2="-172.72" y2="-116.84" width="0.1524" layer="91"/>
 <wire x1="-172.72" y1="-116.84" x2="-172.72" y2="-129.54" width="0.1524" layer="91"/>
 <pinref part="C11" gate="G$1" pin="+"/>
+<pinref part="U$14" gate="G$1" pin="VOUT"/>
+<wire x1="-152.4" y1="-129.54" x2="-162.56" y2="-129.54" width="0.1524" layer="91"/>
 <junction x="-162.56" y="-129.54"/>
-<pinref part="U$14" gate="G$1" pin="VIN"/>
-<junction x="-149.86" y="-129.54"/>
 </segment>
 </net>
 <net name="VCC" class="1">
@@ -3279,7 +3278,6 @@ Source: http://www.fairchildsemi.com/ds/FD/FDN360P.pdf</description>
 <net name="N$43" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="VCC"/>
-<wire x1="-101.6" y1="-129.54" x2="-121.92" y2="-129.54" width="0.1524" layer="91"/>
 <wire x1="-101.6" y1="-129.54" x2="-101.6" y2="-76.2" width="0.1524" layer="91"/>
 <pinref part="Q1" gate="G$1" pin="S"/>
 <wire x1="-68.58" y1="-88.9" x2="-68.58" y2="-76.2" width="0.1524" layer="91"/>
@@ -3287,8 +3285,9 @@ Source: http://www.fairchildsemi.com/ds/FD/FDN360P.pdf</description>
 <wire x1="-68.58" y1="-76.2" x2="-53.34" y2="-76.2" width="0.1524" layer="91"/>
 <wire x1="-101.6" y1="-76.2" x2="-53.34" y2="-76.2" width="0.1524" layer="91"/>
 <junction x="-53.34" y="-76.2"/>
+<pinref part="U$14" gate="G$1" pin="VIN"/>
+<wire x1="-124.46" y1="-129.54" x2="-101.6" y2="-129.54" width="0.1524" layer="91"/>
 <junction x="-101.6" y="-129.54"/>
-<pinref part="U$14" gate="G$1" pin="VOUT"/>
 </segment>
 </net>
 </nets>
