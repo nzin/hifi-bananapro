@@ -14,7 +14,7 @@ resistor 10k           | 8      | 652-CRT0603BY1002EAS
 resistor 15k           | 1      | 71-TNPW060315K0BEEA
 resistor 18.2k         | 1      | 71-CRCW0603-18.2K-E3
 barrel power plug      | 1      | 163-179PH-EX
-dc-dc converter        | 1      | 709-SMU02N-05
+dc-dc converter        | 1      | 919-R-78B5.0-2.0
 power                  | 1      | 552-PSAC30U-240L6
 usb type a             | 1      | 710-614004160211
 connectivity (con6)    | 1      | 571-7-534206-0
